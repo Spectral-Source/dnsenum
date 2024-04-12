@@ -36,3 +36,6 @@ fi
 while IFS= read -r ip; do
     host "$ip.$host"
 done < "$wordlist"
+
+# Run the host -t ns command
+host -t ns "$host"
